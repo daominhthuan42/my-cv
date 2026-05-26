@@ -1,0 +1,907 @@
+{
+    "_comment": {
+        "severity_definition": {
+            "CRITICAL": "Crash, memory corruption, undefined behavior, safety critical issue.",
+            "HIGH": "Safety risk, hidden runtime bug, incorrect functionality.",
+            "MEDIUM": "Maintainability, robustness, portability issue.",
+            "LOW": "Formatting, readability, naming convention issue.",
+            "INFO": "Recommendation or project preference only."
+        },
+
+        "status_definition": {
+            "Not Support": "Rule is not implemented yet.",
+            "Partly Support": "Rule is partially checked with limitations.",
+            "Fully Support": "Rule is fully implemented and validated.",
+            "Manual Review": "Rule requires manual review or human judgement.",
+            "Not Applicable": "Rule is not applicable for current project."
+        }
+    },
+
+    "Name_File_001": {
+        "description": "File name shall only consist of alphanumeric characters and underscore. But it shall not start with underscore or numeric.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_File_002": {
+        "description": "File name shall not contain more than 31 characters.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_Var_001": {
+        "description": "All SOFTWARE Modules shall label local variables according to the following scheme:\nComposition of name: <Variable name>\n\nSpelling of name: First letter of each word upper case, consecutive letters lower case.\nThe variable name should start with 'L' followed by 2 characters for data type and then the variable name.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Name_Var_002": {
+        "description": "All SOFTWARE Modules shall label global variables according to the following scheme:\nComposition of name: <Component name>_<Variable name>\n\nOnly one underscore between component name and variable name should be present.\nSpelling of name: First letter of each word upper case, consecutive letters lower case.\nThe variable name should start with G followed by 2 digits for data type and then the meaningful name. Example format: <Component Name>_G<data type><variable name>.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Name_Var_003": {
+        "description": "A meaningfull name (with respect to that context) should be given to the variables. Avoid giving\nname as Temp, Busy, etc.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_Var_004": {
+        "description": "Reserved identifiers, macros and functions in the standard libraries, shall not be defined, redefined\nor undefined. The names of macros, objects and functions in the standard libraries shall not be reused.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_Func_001": {
+        "description": "Global function names are structured with upper case/lower case and the first letter should be upper case.\nComposition of name: <Component name>_<Function name>\n\nOnly one underscore between component name and function name.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_Type_001": {
+        "description": "Enumeration elements shall be uppercase, with words separated by the underscore character and with 'ETag’ as prefix.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_Type_002": {
+        "description": "All SOFTWARE Modules shall label self-defined i.e. specific data types according to the following scheme:\nComposition of type: <Component name>_<Type name>Type\nOnly one underscore between component name and type name.\nSpelling of type: First letter of each word upper case, consecutive letters lower case.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Name_Macro_001": {
+        "description": "Constants defined as a macro shall be written in upper case. Digits and underscores are allowed but not at the start.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_001": {
+        "description": "Each file shall have a file template and file description banner agreed for each project. The template should be defined at the starting of development.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Style_Format_002": {
+        "description": "Items of similar purpose such as file inclusion, declaring global variables, function prototypes, etc. shall be grouped together at the top of a source file (or within a header file).\n\nThe order of these sections shall be:\n\nFor a C source file:\n1. File inclusion (system includes - <xxx.h>, followed by project includes - \"xxx.h\")\n2. Macro\n3. Typedef\n4. Exported global\n5. Private global variables and functions\n\nFor a C header file:\n1. Macro definitions\n2. Typedef definitions\n3. Exported global variables (extern)\n4. Exported global functions",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_003": {
+        "description": "All file headers shall have a revision history which includes correct information about:\n1. Version.\n2. Date of release/publish.\n3. Change description.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Style_Format_004": {
+        "description": "All function headers shall have a information about:\n1. Function name.\n2. Purpose.\n3. Parameters.\n4. Return value.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Style_Format_005": {
+        "description": "Each line in source files shall be limited to 120 columns (more strict rule can be defined as project specific).\nIf the statement exceeds 120 characters, use a 'carriage return' and indent 2 spaces to continue the statement on the next line.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_006": {
+        "description": "Tabs shall not be used instead spaces shall be used. Maintain 2 spaces difference between the levels of indentation.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_007": {
+        "description": "A space shall be used between 'if', 'else if', 'while', 'for', 'switch' and the opening parenthesis.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_008": {
+        "description": "Spaces shall not be used around '.', '->' operators.\nSpaces shall not be used between unary operators and operands.\nUnary operators: '++', '--', '~', '!', '&' (address of), '*' (pointer).",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_009": {
+        "description": "A space shall be used before and after a binary operator.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_010": {
+        "description": "A space shall be used after each comma in the argument or initialization list.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_011": {
+        "description": "Each expression statement shall be on a separate line.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_012": {
+        "description": "Braces which enclose a block shall be placed in the same column, on separate lines directly before and after the block.\n\nThere shall not be anything else on these lines.\n\nThe block of code inside the opening and closing braces shall be indented 2 spaces.\n\nAn opening brace is always at the same level as the line above.\n\nExceptions:\n1. The 'while' in the 'do...while' statement may be placed one space character after the brace closing the block.\n2. The name of the new user type ('struct'/'union'/'enum' type) may be placed one space after the brace closing the element definitions.\n3. Array initialization where the opening and closing braces are in the same line.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Style_Format_013": {
+        "description": "'#if' statements ('#if' - '#else' - '#endif') should be indented according to their nesting depth.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_014": {
+        "description": "Tabs and unwanted spaces shall not be present at the end of the line in make files.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_015": {
+        "description": "The constants shall be place on the left of equality comparisons.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Format_016": {
+        "description": "Check that all condition checks have variables of same type on RHS and LHS or there is explicit type casting.\nRHS: right-hand side.\nLHS: left-hand side.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Style_Format_017": {
+        "description": "Rules for the assembly language using, should be applied defined as a project-specific coding rules.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Style_File_001": {
+        "description": "The interface file shall have the extension '.h'and the body file shall have the extension '.c'.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_File_002": {
+        "description": "Code duplication shall be avoided. The use of functions shall be implemented to increase maintainability and portability of source code.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Style_File_003": {
+        "description": "The file (both header and source) should end with a blank line.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Style_File_004": {
+        "description": "If a module provides several functions and processes additional module source files\n“<Module>_<Sub>.c” shall be used. Meaningful Name can be chosen freely for “<Sub>”.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_File_005": {
+        "description": "The header files should not be included back to back. One header file included in another header\nfile which is included back in the first header file.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Style_File_006": {
+        "description": "A “.c“ file shall not be included in another file: it shall be compiled and provided as an object module.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_001": {
+        "description": "Multi-line comment blocks shall have the opening and closing character sequences in separate lines.\nThere shall not be anything else on these lines, but optional star frames.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_002": {
+        "description": "Comments shall comply with the ANSI-C Standard. C++ comments are not permitted.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_003": {
+        "description": "Suitable comments shall be added for the following elements:\n\n- Includes (for what is it needed?)\n- Definition of macros\n- Declaration of types\n- Elements of structures and unions\n- Definition of variables\n- Definition of constants\n- Definition of functions\n\nRationale:\nUniformity and readability",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_004": {
+        "description": "The following C constructs shall be commented after the concluding bracket if they are longer than 10 lines:\n- switch-case\n- if-then-else\n- do-while\n- for",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_005": {
+        "description": "Constructs and compiler switches shall be commented at the end of block (e.g. after the concluding bracket, '#endif', etc.) if they are longer than 10 lines.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_006": {
+        "description": "Comments shall not be nested.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Style_Comment_007": {
+        "description": "A comment should be placed immediately above and indented same as the line/block of code which it is complementary.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Ext_001": {
+        "description": "If a MISRA warning has occurred, analyse the warning to know if that error can be avoided by\nmodifications in the code. Or that violation of MISRA rule shall be commented and reasoned at the\ncorresponding code line.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Ext_002": {
+        "description": "Conform to the atomic data specification defined by the MCU architecture unless there is a particular request.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Envr_001": {
+        "description": "The software modules have to be developed to be compliable for all processor platforms without any\nchanges. Any necessary processor or compiler specific instructions (e.g. memory locators, pragmas,\nuse of atomic bit manipulations etc.) have to be exported to macros and include files.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Envr_002": {
+        "description": "All SOFTWARE Modules shall not use compiler or platform specific keywords directly.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Envr_003": {
+        "description": "While using object/library files (from third party, customer, etc.) it shall be confirmed that it was\nproduced with same compilers and version which is used in the project.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Envr_004": {
+        "description": "There should not be any compiler and linker warnings (of-course errors also) while building the software.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Envr_005": {
+        "description": "ANSI-C does not support inline assembler and there is no general keyword for the compilers (GHS,\nRenesas compiler). Therefore a macro shall be added in the compiler abstraction to simplify porting\nto different compilers.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Envr_006": {
+        "description": "For runtime software, Compiler specific header files, libraries and intrinsic functions shall not be used.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Comment_001": {
+        "description": "All comments shall be in English and spell checked.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Comment_002": {
+        "description": "The purpose of every line of executable code should be explained by a comment, although one\ncomment may describe more than one source line of code.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Rules_Comment_003": {
+        "description": "Comment should be meaningful with the corresponding line of code. Avoid to stating in comments\nwhat is better stated in code.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Rules_Comment_004": {
+        "description": "Commented out code shall not be left permanently in source files. Any lines or blocks of code that\nexists specifically for debugging purpose shall be surrounded by pre-processor directives for\nconditional compilation (e.g. #ifdef DEBUG … #endif)",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Comment_005": {
+        "description": "File function header format should be consistent across the code.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Comment_006": {
+        "description": "Each cast shall feature an associated comment describing how the code ensures proper behaviour\nacross the range of possible values on the right side.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Identifier_001": {
+        "description": "Identifiers shall not have both internal and external linkage in the same translation unit.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Types_001": {
+        "description": "Enumeration types shall be used instead of integer constants for limited choices.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Types_002": {
+        "description": "Integer values of enumeration elements shall not be used in calculations.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Types_003": {
+        "description": "Identifiers shall not contain the ‘_’ character twice in succession.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Types_004": {
+        "description": "Loop counter variables shall be declared using generic types (e.g. ‘uint’).",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Const_001": {
+        "description": "Hexadecimal constants shall be represented using all uppercase letters following 0x.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Const_002": {
+        "description": "Numeric values shall not be used in code; symbolic values shall be used instead.\n\nException:\n1. 0 in initialization of variables.\n2. 1 in bit operations.\n3. Constant.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Const_003": {
+        "description": "All SOFTWARE Modules shall indicate all global data with read-only purposes by explicitly assigning the 'const' keyword.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_001": {
+        "description": "Global variables must be avoided or its usage needs to be justified.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_002": {
+        "description": "The 'register' storage class specifier must not be used.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_003": {
+        "description": "A structure or enumeration type variable shall not be defined in the type definition itself. It means\neach self-defined type has to have an explicit type declaration even if there is only one variable of\nthis type.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_004": {
+        "description": "Multiple variable declarations shall not be allowed on the same line.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_005": {
+        "description": "A global/exported object or function of a module shall be declared with ‘extern’ only in that\nparticular module header file.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_006": {
+        "description": "Each implementation file shall have the corresponding header file and an optional private header file.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_007": {
+        "description": "A private header file must not be used by implementation files other than the one it corresponds to.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_008": {
+        "description": "Variables and functions (other than macros) shall not be defined within in an ‘.h’ file. They shall be\ndefined within the module’s C file.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_009": {
+        "description": "Directly use compiler and platform specific inline keywords like ‘__inline__’ or ‘_inline’ are not\nallowed. To define an inline function, macro (e.g. LOCAL_INLINE) shall be used.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_010": {
+        "description": "Declarations of functions shall always be stated with detailed parameter list, i.e. the type and a\npractical designation of the relevant parameters.\nDesignator names in ‘.c’ and ‘.h’ file shall be identical.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_011": {
+        "description": "Declaration and definition of local functions shall have the storage-class specifier ‘static’.\nLocal function means function with internal linkage (only visible inside the module).",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_012": {
+        "description": "Variables used in the code need to be defined; moreover, unused variables should not be contained.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_013": {
+        "description": "Unused input parameter(s) of function shall not be declared.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_014": {
+        "description": "The length of the register in the device header file and the CPU manual should be verified and its\nimplementation and the value generation details should be verified across variants to avoid illegal\naccess of that register.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_015": {
+        "description": "The ‘volatile’ keyword should be used to indicate variables that may be modified outside of the\nprogram’s control (i.e., any register values that are set or cleared by hardware, or memory that is\ndual-port and may be modified by an external device).",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_016": {
+        "description": "The common implementations across the modules such as initialization of status of the driver should\nbe consistent across all the modules.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_017": {
+        "description": "The variables and macros (used in different modules but similar context), shall be named similarly.\nConsistency should be maintained across modules.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_018": {
+        "description": "The type of variable should be appropriately selected depending on the values that the variable may hold.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_019": {
+        "description": "Typecasts and the values assigned to variables, the compiler abstractions to it shall be correctly\ndefined and shall be consistent across the modules",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_020": {
+        "description": "No multiple uses of variable names.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_021": {
+        "description": "Bit-fields shall not be defined within signed integer types.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_022": {
+        "description": "If a function parameter is not going to be changed inside the function then it should be made a constant parameter.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_023": {
+        "description": "The keyword 'auto' shall not be used ('auto' is the default storage class for local variables).",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_024": {
+        "description": "Variables shall be defined in the appropriate scope. for example, the variable that is defined in the\nsame file and is accessed from multiple functions, this variables declared as static at file scope.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_025": {
+        "description": "The variables should have only one purpose. should not have multiple purpose.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Rules_Defn_Decl_026": {
+        "description": "The Type and size of the variables are suited to its intended use.\ne.g. Do not increase the occupied size by taking on extra the size of the variable.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Init_001": {
+        "description": "All variables and pointers shall be initialized to its default value before its usage. The declaration and initialization shall be in different lines.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_001": {
+        "description": "Brackets shall always be used in complex expressions even if the C priority rules do not necessarily\ndemand this for operators. . This also applies to expressions evaluated by the pre-processor.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_002": {
+        "description": "Control structure nesting should be minimized and not exceed 4 levels. The number of levels shall\nbe customizable. That means that it shall be possible to reduce the allowed number of levels per file.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_003": {
+        "description": "Multiple assignments shall not be done.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_004": {
+        "description": "The use of '++' and '--' should be limited to simple cases.  They shall not be used in statements where\nother operators occur. The prefix use is always forbidden.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_005": {
+        "description": "While performing masking operation, make sure of the mask value to be used and its impact for other functionalities.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_006": {
+        "description": "Check for wrong usage of '&&', '||' while performing mask operations in the CODE.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_007": {
+        "description": "If the division operation is being performed in the embedded code then make sure to avoid condition of illegal division by zero.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_008": {
+        "description": "During updating for similar part of code (e.g. timer unit/channel interrupt handlers), check the\ncode (e.g. unit/channel numbers) carefully, because there can be typo mistakes in updating\ncorrect values of those numbers.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_009": {
+        "description": "Try to avoid comparison of RAM variable in the loops to reduce the CPU load.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_010": {
+        "description": "Considering integer boundaries (overflows & underflows) while handling arithmetic operation.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_011": {
+        "description": "No dynamic objects or variables, or else online test during their creation.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_012": {
+        "description": "Type conversions of the variables shall be done explicitly and correctly. It shall not be implicit.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Expr_013": {
+        "description": "None of the bit-wise operators (i.e. '&', '|', '~', '^', '<<', '>>') shall be used to manipulate signed integer data.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_001": {
+        "description": "The controlling expressions shall not contain function call.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_002": {
+        "description": "Assignments shall not be made within an 'if' or 'else if' or loop controlling expression.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_003": {
+        "description": "Cyclomatic complexity numbers of all functions shall be minimized and be limited for each project\n(basically <= 10 for each ASIL level is reasonable). They shall be analysed and documented. The\nlimitation should be set less than 30 dependent on the specific project.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_004": {
+        "description": "'break' and 'continue' commands should never be used in loops except under very rare circumstances when there is no other option.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_005": {
+        "description": "Any 'if' statement shall end with an 'else' clause.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_006": {
+        "description": "Avoid endless loop conditions in the source code (especially the loops in source code which\nhave exit conditions depending on changes in the status of registers). Any loop should also\nhave a condition to exit at some points of time by using some count values which are\nappropriate for the functionality of that loop.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_007": {
+        "description": "The ‘break’ should be between each ‘case’ statement, unless the ‘case’ statements need to be\nexecuted in sequence in switch statements (mentioned exception is allowed with regard to faster\nprocessing speed, higher code efficiency, etc.).",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_008": {
+        "description": "The write protected registers should be identified. The special sequence of using protection command registers and status registers to update those protected registers should be followed.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_009": {
+        "description": "No hidden data flow or control flow except for call back function defined by SOFTWARE. “No hidden\ndata flow or control flow” are meant to prohibit a control flow from processing multiple meanings.\nThis is the rule to control the increase in risk of occurrence of problems by implementing a control\nwhich is not recognized by a designer.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_010": {
+        "description": "No unconditional jumps. Unconditional jumps like ‘goto’ shall not be used.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_011": {
+        "description": "When you use 'switch', 'while', 'do-while', 'for' statement, even if you can write one sentence,\nwriting enclosed within the brace { }.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_012": {
+        "description": "When use “if-else” or “switch”. All conditions should be handled.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_CtrlFlow_013": {
+        "description": "There shall be no unreachable code.\ne.g. delete the branch code by impossible conditions.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Func_001": {
+        "description": "Functions that do not return a parameter shall be declared as 'void' type.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Func_002": {
+        "description": "A function shall not return a pointer to a local object.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Func_003": {
+        "description": "If a function returns a value, the calling code should check for an absence of errors.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+    
+    "Rules_Func_004": {
+        "description": "One entry and one exit point in subprograms and functions. The way to invoke one function should\nbe same and consistent. The return for exit should be one in a subprogram and a function.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Func_005": {
+        "description": "No recursions. Recursive functions shall not be used.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Func_006": {
+        "description": "All services and APIs of a module shall be multicore re-entrant.\n\nRe-entrant definition (single core): A function is re-entrant if it can be interrupted somewhere in\nits execution and then safely called again before its previous invocation completes executing,\nproduce correct results for both invocations.\n\nRe-entrant definition (multiple cores): A function is re-entrant if it can be called on one core while\nit is already executing on any other core and still produce correct results for all calls.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Func_007": {
+        "description": "All scheduled functions of a module shall be multicore re-entrant.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Ptr_001": {
+        "description": "Limited use of pointers. Avoid abuse of pointers for unnecessary cases and consider design to avoid usage of pointers.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Ptr_002": {
+        "description": "A structure as parameter for a function should be passed as pointer.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Ptr_003": {
+        "description": "Pointers shall be checked before being de-referenced.",
+        "severity": "CRITICAL",
+        "status": "Not Support"
+    },
+
+    "Rules_Ptr_004": {
+        "description": "A 'typedef' shall be used to simplify program syntax when declaring function pointers.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Ptr_005": {
+        "description": "To address a structure's fields via a pointer to the structure, the notation 'Ptr->Field' shall be used.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Struct_001": {
+        "description": "All members of a structure shall be named and shall only be accessed via their names.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_001": {
+        "description": "Header files which are part of predefined program libraries shall be included using '< >'.\nHeader files which are part of the source code generated in the software project shall be included\nwith ‘””’ (double quotes symbols).",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_002": {
+        "description": "Each header file shall protect itself against multiple inclusions.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_003": {
+        "description": "Each module shall include its own header file.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_004": {
+        "description": "A file should include all the file they need and not rely on secondary includes (notice that only files\nwhich are really required shall be included).",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_005": {
+        "description": "Path shall not be specified (absolute or relative) for the declaration of the included file.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_006": {
+        "description": "Direct values (fixed value, addresses, etc.) should not be hard-coded in the source code. Macro ('#define', 'constant', etc.) should be used preferably.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_007": {
+        "description": "Only the following pre-processor directives shall be used: '#if', '#elif', '#else', '#endif', '#ifdef', '#ifndef', '#define', '#include', '#error' and '#pragma'.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_008": {
+        "description": "Compiler switches shall be compared with defined values. Simple checks if a compiler switch is\ndefined shall not be used. In general ‘ON’ and ‘OFF’ shall be used to switch functionality on or off.\nThese symbols and their values are defined in a header file which define common standard types.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_009": {
+        "description": "Macros used in place of functions should have the same notation as a function.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_010": {
+        "description": "If a macro definition represents several statements, the entire statement shall be encapsulated\nwithin curly brackets. For multi-lines macro definitions use the ‘\\’ (backslash or yen) symbol at the\nend of line.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_011": {
+        "description": "In order to avoid hidden unintended type conversions, the explicit casting in macros for macro\nparameters shall not be allowed. If type casting is needed, it shall be done explicitly by the macro\ncaller. Exceptions shall be documented.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_PreProcess_012": {
+        "description": "Macros shall not use global names, since the global names may be hidden by a local declaration.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_001": {
+        "description": "Eliminate unnecessary recalculations of values.",
+        "severity": "LOW",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_002": {
+        "description": "Combine equivalent constants, however, this is at the cost of readability. Appropriate comments should be provided where necessary.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_003": {
+        "description": "The condition of most probable occurrence should be placed in the 'if' rather than in the 'else'.",
+        "severity": "INFO",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_004": {
+        "description": "Substitute operations to conserve resources. Optimize '|' (or) and '&' (and) expressions. An\n‘|’/’&’ query should be held as short as possible:\n- At an ‘|’ query, put the most probable case in the first statement.\n- At an ‘&’ query, put the most improbable case in the first statement.\n- For the query of the same variables use a mask.",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_005": {
+        "description": "The time for the execution of interrupt service routine should be minimal. The delay in case of nested interrupts is to be documented.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_006": {
+        "description": "Pre-processor macros/configuration data/source code shall be memory mapped to the correct section.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_007": {
+        "description": "Memory mapping shall not be used for variables defined within a function. Memory mapping header\nfiles shall not be included inside the body of a function.",
+        "severity": "HIGH",
+        "status": "Not Support"
+    },
+
+    "Rules_Opt_008": {
+        "description": "Avoid wastage of bytes by aligning variables in memory:\n- 16-bit variables have to be located at an address divisible by 2.\n- 32-bit variables have to be located at an address divisible by 4.\nIt is recommended to sort by size (e.g. first all pointers, then all 32-bit variables, then all 16-bit\nvariables and then all 8-bit variables).",
+        "severity": "MEDIUM",
+        "status": "Not Support"
+    }
+}
