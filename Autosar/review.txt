@@ -1,0 +1,273 @@
+# Embedded Automotive Interview Questions
+
+Based on your CV 
+
+---
+
+# 1. Introduction & Experience
+
+1. Can you introduce yourself?
+2. Tell me about your experience in automotive embedded software development.
+3. Why did you move from software testing to embedded software development?
+4. Which project was the most challenging for you?
+5. What was your main contribution in the Single Mainline project?
+6. What responsibilities did you have as a Senior Embedded Software Engineer?
+7. Have you ever mentored junior engineers?
+8. What achievement are you most proud of in your career?
+9. Why are you looking for a new opportunity?
+10. What kind of role are you looking for next?
+
+---
+
+# 2. AUTOSAR & MCAL Questions
+
+1. What is AUTOSAR?
+2. What is the role of MCAL in AUTOSAR architecture?
+3. What is the difference between MCAL and ECU Abstraction Layer?
+4. What is the purpose of the GPT module?
+5. How does the PWM module work?
+6. What is the SPI module used for?
+7. What is the difference between synchronous and asynchronous SPI communication?
+8. What is the ICU module used for?
+9. What is SchM in AUTOSAR?
+10. What are DET and DEM?
+11. What is Memory Mapping in AUTOSAR?
+12. What is the purpose of configuration files in AUTOSAR MCAL?
+14. What is a critical section?
+
+---
+
+# 3. Embedded C Programming Questions
+
+1. What is the purpose of the `volatile` keyword?
+2. What is the difference between `const` and `volatile`?
+3. What is pointer arithmetic?
+4. What is a function pointer?
+5. What is the difference between stack and heap memory?
+7. What is the difference between static and global variables?
+8. What is a reentrant function?
+A reentrant function is a function that can be safely executed by:
+multiple tasks
+multiple threads
+interrupts
+at the same time without causing data corruption or unexpected behavior.
+
+11. What can cause memory corruption?
+Memory corruption happens when a program:
+- writes to invalid memory
+- accesses memory incorrectly
+This can cause:
+- crashes
+- undefined behavior
+- random bugs
+
+12. What is the difference between a macro and an inline function?
+15. What is the purpose of the `static` keyword in C?
+
+---
+
+# 4. Debugging Questions
+
+1. Describe your debugging process.
+2. What tools have you used for debugging?
+3. How do you debug an interrupt issue?
+4. What would you check if an interrupt is not triggered?
+5. How do you debug intermittent issues?
+6. What is a hard fault?
+7. Have you used T32 for debugging?
+8. How do you distinguish between hardware and software issues?
+9. Have you ever debugged register-level issues?
+10. How do you analyze timing-related bugs?
+
+---
+
+# 5. Functional Safety (ISO 26262)
+
+1. What is ISO 26262?
+2. What are ASIL levels?
+3. What is a safety mechanism?
+A safety mechanism is a feature or technique used to detect, prevent, or control faults in order to maintain system safety.
+
+4. What is the difference between systematic faults and random faults?
+Systematic faults are caused by design or development errors such as software bugs, incorrect requirements, or integration mistakes. They are usually reproducible under the same conditions.
+Random faults are caused by unpredictable hardware failures such as bit flips, electrical noise, or component aging, and are typically handled using safety mechanisms like ECC, watchdogs, and diagnostics
+
+6. What Functional Safety activities have you worked on?
+7. What is a safety work product?
+10. What is traceability in Functional Safety?
+11. How do you verify safety requirements?
+Safety requirements are verified by ensuring that:
+the implemented system behavior
+matches the defined safety requirements
+under normal and fault conditions.
+
+In automotive projects following ISO 26262, verification is performed through:
+reviews
+analysis
+testing
+traceability
+safety validation activities
+
+12. What is the V-model in automotive development?
+13. What is the difference between unit testing and integration testing?
+14. How do you handle safety-critical bugs?
+Safety-critical bugs must be handled with high priority because they may impact vehicle safety in automotive systems following ISO 26262.
+
+15. What risks can occur if SPI communication times out?
+If SPI communication times out, risks may include data loss, incorrect system behavior, task blocking.
+In automotive systems, SPI timeout handling is important because failed communication with sensors or external devices may lead to unsafe system behavior.
+
+---
+
+# 6. Software Testing Questions
+
+1. What is Acceptance Testing?
+2. What is Integration Testing?
+4. How do you write test cases?
+5. What is requirement traceability?
+6. How do you ensure software quality?
+7. How do you report and track defects?
+8. What testing activities did you perform in your projects?
+
+---
+
+# 7. Architecture & Design Questions
+
+2. What challenges did you face in the Single Mainline project?
+3. How did you support multiple MCU platforms in one codebase?
+
+---
+
+# 8. SPI / GPT / PWM Deep-Dive Questions
+
+## SPI
+
+1. Explain how SPI communication works.
+2. What are MOSI, MISO, SCLK, and CS?
+3. What causes SPI communication failure?
+4. How do you handle SPI timeout errors?
+5. What is full-duplex communication?
+6. What is the difference between polling and interrupt mode in SPI?
+7. What is DMA support in SPI?
+DMA support in SPI allows data transfer between memory and the SPI peripheral without continuous CPU involvement.
+The CPU configures the DMA controller once, and DMA automatically handles data movement, improving performance and reducing CPU load, especially for large or high-speed SPI transfers.
+
+---
+
+## GPT
+
+1. What is the purpose of GPT?
+2. How do timers work in microcontrollers?
+Timers in microcontrollers work by using a hardware counter that increments or decrements based on a clock source.
+They are used to:
+measure time
+generate delays
+create periodic interrupts
+generate PWM
+capture signal timing
+Timers are one of the most important peripherals in embedded systems.
+
+3. What is timer overflow?
+
+---
+
+## PWM
+
+1. What is PWM?
+2. How is PWM frequency calculated?
+3. What is duty cycle?
+4. What are common PWM applications?
+5. How do you configure PWM channels?
+
+---
+
+# 9. Process & Collaboration Questions
+
+1. What development process did your team follow?
+2. How did you use JIRA in your projects?
+3. What is the difference between Git and SVN?
+4. What is branching strategy?
+5. What is the difference between merge and rebase?
+6. How do you resolve code conflicts?
+7. How do you review code?
+8. How do you communicate with cross-functional teams?
+9. How do you handle tight deadlines?
+10. Have you worked directly with customers?
+
+---
+
+# 10. Behavioral Questions
+
+1. Tell me about a difficult bug you fixed.
+2. Tell me about a conflict within your team.
+3. Describe a situation where you worked under pressure.
+4. Tell me about a mistake you made and what you learned from it.
+5. How do you prioritize tasks?
+6. How do you handle changing requirements?
+7. What motivates you as an engineer?
+8. Why should we hire you?
+9. What are your strengths?
+10. What are your weaknesses?
+
+---
+
+# 11. Coding / Practical Questions
+
+## Example 1
+
+```c
+uint8 a = 255;
+a = a + 1;
+printf("%d", a);
+```
+
+Possible questions:
+
+* What is the output?
+* Why does overflow happen?
+* Is there any MISRA concern?
+
+---
+
+## Example 2
+
+```c
+while(flag == 0)
+{
+}
+```
+
+Possible questions:
+
+* Is there any issue with this code?
+* Should `flag` be declared as `volatile`?
+* Why?
+
+---
+
+## Example 3
+
+```c
+int *ptr = NULL;
+*ptr = 10;
+```
+
+Possible questions:
+
+* What will happen?
+* How would you debug this issue?
+
+---
+
+# 12. Senior-Level Questions
+
+1. What makes automotive embedded software different from normal embedded software?
+2. How do you ensure reliability in automotive systems?
+3. How do you design software for maintainability?
+4. How do you approach root cause analysis?
+5. What is the biggest challenge in multi-platform development?
+6. How do you improve code quality in large projects?
+7. How do you estimate development effort?
+8. What is your approach to technical leadership?
+9. How do you support junior engineers?
+10. What are the most important qualities of a Senior Embedded Engineer?
